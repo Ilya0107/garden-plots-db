@@ -5,7 +5,7 @@
 
 A C++ program that keeps a list of garden plots: file I/O, sorting, a summary and a search.
 
-![Screenshot](screenshots/screenshot.svg)
+![Screenshot](screenshots/screenshot.png)
 
 ## About
 

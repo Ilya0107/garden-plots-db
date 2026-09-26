@@ -103,7 +103,7 @@ void PlotArray::delInfo() {
 	cout << *this;
 	if (n == 0) return;
 	cout << "Введите номер строки, которую хотите удалить: "; cin >> R;
-	if (R < 0 || n < R) {
+	if (R <= 0 || R > n) {
 		cout << "Нет такой строки\n";
 		return;
 	}
@@ -181,7 +181,7 @@ void PlotArray::correctInfo() {
 	cout << *this;
 	cout << "Введите номер строки, которую хотите изменить: "; cin >> d;
 	d--;
-	if (d < 0 || n < d) {
+	if (d < 0 || d >= n) {
 		cout << "Нет такой строки\n";
 		return;
 	}

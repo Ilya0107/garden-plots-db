@@ -5,11 +5,11 @@ ostream& operator<<(ostream& out, PlotSummary& z) {
 		out << "Перечень пуст\n";
 		return out;
 	}
-	out << "  " << string(36, '-') << endl;
+	out << "  " << string(38, '-') << endl;
 	out << "  |" << "  |      Название      |          |" << endl;
 	out << "  |" << "  |   садоводческого   |Количество|" << endl;
 	out << "  |" << "№ |    товарищества    |          |" << endl;
-	out << "  " << string(36, '-') << endl;
+	out << "  " << string(38, '-') << endl;
 	for (int i = 0; i < z.k; i++)
 		out << left << "  |" << setw(2) << i + 1 << z.py[i] << endl;
 	return out;
@@ -137,14 +137,14 @@ ofstream& operator<<(ofstream& out, PlotSummary& z) {
 		return out;
 	}
 	if (z.k == 0) { cout << "Массив пустой\n"; return out; }
-	out << "  " << string(36, '-') << endl;
+	out << "  " << string(38, '-') << endl;
 	out << "  |" << "  |      Название      |          |" << endl;
 	out << "  |" << "  |   садоводческого   |Количество|" << endl;
 	out << "  |" << "№ |    товарищества    |          |" << endl;
-	out << "  " << string(36, '-') << endl;
+	out << "  " << string(38, '-') << endl;
 	for (int i = 0; i < z.k; i++)
 		out << left << "  |" << setw(2) << i + 1 << z.py[i] << endl;
-	out << "  " << string(36, '-') << endl;
+	out << "  " << string(38, '-') << endl;
 	cout << "Перечень сохранен в " << file << endl;
 	return out;
 }

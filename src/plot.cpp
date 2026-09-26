@@ -18,10 +18,10 @@ istream& operator>>(istream& in, Plot& z) {
 }
 
 ostream& operator<<(ostream& out, Plot& z) {
-	out << fixed << setprecision(1) << left << "|" << setw(20) << z.name << "|" << setw(7) << z.num << "|" << setw(32) << z.owner << "|" << setw(11) << z.area << "|" << setw(9) << z.price << "|" << right << endl;
+	out << fixed << setprecision(1) << left << "|" << pad(z.name, 20) << "|" << setw(7) << z.num << "|" << pad(z.owner, 32) << "|" << setw(11) << z.area << "|" << setw(9) << z.price << "|" << right << endl;
 	return out;
 }
 ostream& operator<<(ostream& out, PlotCount& z) {
-	out << fixed << left << '|' << setw(20) << z.name << '|' << setw(10) << z.count << '|';
+	out << fixed << left << '|' << pad(z.name, 20) << '|' << setw(10) << z.count << '|';
 	return out;
 }

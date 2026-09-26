@@ -217,13 +217,13 @@ ofstream& operator<<(ofstream& fout, PlotArray& z) {
 		cout << file << "\nНе создается\n";
 		return fout;
 	}
-	fout << "  " << string(90, '-') << endl;
+	fout << "  " << string(92, '-') << endl;
 	fout << "  |" << "  |      Название      |       |                                |           |           |" << endl;
 	fout << "  |" << "  |   садоводческого   | Номер |              ФИО               |  Площадь  | Стоимость |" << endl;
 	fout << "  |" << "№ |    товарищества    |участка|           владельца            |участка,m^2|  участка  |" << endl;
-	fout << "  " << string(90, '-') << endl;
+	fout << "  " << string(92, '-') << endl;
 	for (int i = 0; i < z.n; i++) {
-		fout << left << "  |" << setw(2) << i + 1 << "|" << setw(20) << z.px[i].name << "|" << setw(7) << z.px[i].num << "|" << setw(32) << z.px[i].owner << "|" << setw(11) << z.px[i].area << "|" << setw(11) << z.px[i].price << "|" << right << endl;
+		fout << left << "  |" << setw(2) << i + 1 << "|" << pad(z.px[i].name, 20) << "|" << setw(7) << z.px[i].num << "|" << pad(z.px[i].owner, 32) << "|" << setw(11) << z.px[i].area << "|" << setw(11) << z.px[i].price << "|" << right << endl;
 	}
 	fout.close();
 	cout << "Массив сохранен в файле " << file << endl;
@@ -248,11 +248,11 @@ ostream& operator<<(ostream& out, PlotArray& z) {
 		out << "Массив пустой\n";
 		return out;
 	}
-	out << "  " << string(88, '-') << endl;
+	out << "  " << string(90, '-') << endl;
 	out << "  |" << "  |      Название      |       |                                |           |         |" << endl;
 	out << "  |" << "  |   садоводческого   | Номер |              ФИО               |  Площадь  |Стоимость|" << endl;;
 	out << "  |" << "№ |    товарищества    |участка|           владельца            |участка,m^2| участка |" << endl;;
-	out << "  " << string(88, '-') << endl;
+	out << "  " << string(90, '-') << endl;
 	for (int i = 0; i < z.n; i++)
 		out << fixed << setprecision(1) << left << "  |" << setw(2) << i + 1 << z.px[i];
 	return out;
